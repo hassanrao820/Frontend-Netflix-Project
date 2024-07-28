@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>NetFlix</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+    </style>
+</head>
+<body id="content">
+    <div class="header">
+        <nav class="navbar">
+            <span class="logo"><img src="img/logo.png" alt=""></span>
+            <div class="btn">
+                <button id="languageButton" onclick="toggleDropdown()">Select Language <i class='bx bxs-down-arrow' onclick="toggleDropdown()"></i></button>
+                <div id="dropdown" class="dropdown">
+                    <a href="#" onclick="changeLanguage('ur')">Urdu</a>
+                    <a href="#" onclick="changeLanguage('en')">English</a>
+                </div>
+                <button id="sign-in" data-translate="signIn">Sign in</button>
+            </div>
+        </nav>
+        <div class="header-content">
+            <h1 data-translate="headerTitle">Unlimited movies, TV Shows, and more.</h1>
+            <h3 data-translate="headerSubtitle">Watch anywhere. Cancel anytime</h3>
+            <p data-translate="headerDescription">Ready to watch? Enter your Email to create or restart your membership.</p>
+            <form class="email-signup">
+                <input type="email" name="" id="input" placeholder="Email address" required>
+                <button type="submit" data-translate="getStarted">Get Started<i class='bx bx-right-arrow-alt'></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="features">
+        <div class="row">
+            <div class="text-col">
+                <h2 data-translate="feature1Title">Enjoy Your TV.</h2>
+                <p data-translate="feature1Description">Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+            </div>
+            <div class="img-col">
+                <img src="img/feature-1.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-col">
+                <img src="img/feature-2.png" alt="">
+            </div>
+            <div class="text-col">
+                <h2 data-translate="feature2Title">Download your Show to watch online.</h2>
+                <p data-translate="feature2Description">Save your favorite easily and always have something to watch.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="text-col">
+                <h2 data-translate="feature3Title">Watch everywhere.</h2>
+                <p data-translate="feature3Description">Streaming unlimited movies and TV shows on your Phone, Tablet, laptop and TV.</p>
+            </div>
+            <div class="img-col">
+                <img src="img/feature-3.png" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="img-col">
+                <img src="img/feature-4.png" alt="">
+            </div>
+            <div class="text-col">
+                <h2 data-translate="feature4Title">Create profile for children.</h2>
+                <p data-translate="feature4Description">With the advent of streaming services, children today have unprecedented access to a vast array of entertainment options. </p>
+            </div>
+        </div>
+    </div>
+    <div class="faq">
+        <h2 data-translate="faqTitle">Frequently Asked Questions</h2>
+        <ul class="accordion">
+            <li>
+                <input type="radio" name="accordion" id="first">
+                <label for="first" data-translate="faq1">What is Netflix</label>
+                <div class="content">
+                    <p data-translate="faq1Content">Netflix is a global streaming service that offers a wide range of TV shows, movies, documentaries, and original programming.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="second">
+                <label for="second" data-translate="faq2">How much netflix cost?</label>
+                <div class="content">
+                    <p data-translate="faq2Content">The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="third">
+                <label for="third" data-translate="faq3">Where can i Watch?</label>
+                <div class="content">
+                    <p data-translate="faq3Content">The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.</p>
+                </div>
+            </li>
+            <li>
+                <input type="radio" name="accordion" id="fourth">
+                <label for="fourth" data-translate="faq4">How i cancel the Subscription?</label>
+                <div class="content">
+                    <p data-translate="faq4Content">In the subscription management section, there should be an option to "Cancel Subscription".</p>
+                </div>
+            </li>
+        </ul>
+        <small data-translate="readyToWatch">Ready to watch? Enter your Email to enjoy your favorite movies.</small>
+        <form id="email-signup" class="email-signup">
+            <input type="email" name="" id="input" placeholder="Email address" required>
+            <button id="btn" type="submit" data-translate="getStarted">Get Started<i class='bx bx-right-arrow-alt'></i></button>
+        </form>
+    </div>
+    <footer>
+        <div class="footer">
+            <h2 data-translate="questionCall">Question? Call 0305-8887237</h2>
+            <div class="row">
+                <div class="col">
+                    <a href="#" data-translate="faq">FAQ</a>
+                    <a href="#" data-translate="investorRelation">Investor Relation</a>
+                    <a href="#" data-translate="privacy">Privacy</a>
+                    <a href="#" data-translate="speedTest">Speed Test</a>
+                </div>
+                <div class="col">
+                    <a href="#" data-translate="helpCenter">Help Center</a>
+                    <a href="#" data-translate="cookies">Cookies</a>
+                    <a href="#" data-translate="legalNotice">Legal Notice</a>
+                    <a href="#" data-translate="jobs">Jobs</a>
+                </div>
+                <div class="col">
+                    <a href="#" data-translate="account">Account</a>
+                    <a href="#" data-translate="waysToWatch">Ways to Watch</a>
+                    <a href="#" data-translate="corporateInfo">Corporate Info.</a>
+                    <a href="#" data-translate="onlyOnNetflix">Only on Netflix</a>
+                </div>
+                <div class="col">
+                    <a href="#" data-translate="mediaCenter">Media Center</a>
+                    <a href="#" data-translate="termsOfUse">Terms of Use</a>
+                    <a href="#" data-translate="contactUs">Contact Us</a>
+                </div>
+            </div>
+            <p class="copyright">Netflix | Designed By Hassan Akhtar | Copyright &copy; 2024</p>
+        </div>
+    </footer>
+        <script>
+            // Translations object
+            const translations = {
+                "en": {
+        "title": "Hello, World!",
+        "welcomeMessage": "Welcome to our website.",
+        "description": "This is a sample text for demonstration purposes.",
+        "buttonText": "Select Language",
+        "signIn": "Sign in",
+        "headerTitle": "Unlimited movies, TV Shows, and more.",
+        "headerSubtitle": "Watch anywhere. Cancel anytime.",
+        "headerDescription": "Ready to watch? Enter your Email to create or restart your membership.",
+        "getStarted": "Get Started",
+        "feature1Title": "Enjoy Your TV.",
+        "feature1Description": "Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.",
+        "feature2Title": "Download your Show to watch online.",
+        "feature2Description": "Save your favorite easily and always have something to watch.",
+        "feature3Title": "Watch everywhere.",
+        "feature3Description": "Streaming unlimited movies and TV shows on your Phone, Tablet, laptop and TV.",
+        "feature4Title": "Create profile for children.",
+        "feature4Description": "With the advent of streaming services, children today have unprecedented access to a vast array of entertainment options.",
+        "faqTitle": "Frequently Asked Questions",
+        "faq1": "What is Netflix",
+        "faq1Content": "Netflix is a global streaming service that offers a wide range of TV shows, movies, documentaries, and original programming.",
+        "faq2": "How much netflix cost?",
+        "faq2Content": "The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.",
+        "faq3": "Where can i Watch?",
+        "faq3Content": "The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.",
+        "faq4": "How i cancel the Subscription?",
+        "faq4Content": "In the subscription management section, there should be an option to 'Cancel Subscription'.",
+        "readyToWatch": "Ready to watch? Enter your Email to enjoy your favorite movies.",
+        "questionCall": "Question? Call 0305-8887237",
+        "faq": "FAQ",
+        "investorRelation": "Investor Relation",
+        "privacy": "Privacy",
+        "speedTest": "Speed Test",
+        "helpCenter": "Help Center",
+        "cookies": "Cookies",
+        "legalNotice": "Legal Notice",
+        "jobs": "Jobs",
+        "account": "Account",
+        "waysToWatch": "Ways to Watch",
+        "corporateInfo": "Corporate Info.",
+        "onlyOnNetflix": "Only on Netflix",
+        "mediaCenter": "Media Center",
+        "termsOfUse": "Terms of Use",
+        "contactUs": "Contact Us",
+        "footerButtonText": "Select Language"
+    },
+                "ur": {
+        "title": "ہیلو، دنیا!",
+        "welcomeMessage": "ہماری ویب سائٹ پر خوش آمدید۔",
+        "description": "یہ ڈیمو کے مقاصد کے لیے نمونہ متن ہے۔",
+        "buttonText": "زبان منتخب کریں",
+        "signIn": "سائن ان",
+        "headerTitle": "غیر محدود فلمیں، ٹی وی شوز، اور زیادہ۔",
+        "headerSubtitle": "کہیں بھی دیکھیں۔ کبھی بھی منسوخ کریں۔",
+        "headerDescription": "تیار ہیں دیکھنے کے لئے؟ اپنا ای میل درج کریں تاکہ آپکی ممبرشپ شروع ہو سکے یا دوبارہ شروع ہوسکے۔",
+        "getStarted": "شروع کریں",
+        "feature1Title": "اپنے ٹی وی کا لطف اُٹھائیں۔",
+        "feature1Description": "ہوش ٹیلی ویز، پلے اسٹیشن، ایکس باکس، کرومکاسٹ، ایپل ٹی وی، بلو رے پلیئرز اور زیادہ پر دیکھیں۔",
+        "feature2Title": "اپنا شو آن لائن دیکھنے کے لئے ڈاؤن لوڈ کریں۔",
+        "feature2Description": "اپنی پسندیدہ کو آسانی سے محفوظ کریں اور ہمیشہ کچھ دیکھنے کے لئے کچھ ہو۔",
+        "feature3Title": "ہر جگہ دیکھیں۔",
+        "feature3Description": "اپنے فون، ٹیبلٹ، لیپ ٹاپ اور ٹی وی پر غیر محدود فلمیں اور ٹی وی شوز سٹریم کریں۔",
+        "feature4Title": "بچوں کے لئے پروفائل بنائیں۔",
+        "feature4Description": "سٹریمنگ سروس کی شروعات کے ساتھ، آج کے بچے انوکھی رسائی حاصل کرتے ہیں۔",
+        "faqTitle": "اکثر پوچھے گئے سوالات",
+        "faq1": "What is Netflix",
+        "faq1Content": "Netflix is a global streaming service that offers a wide range of TV shows, movies, documentaries, and original programming.",
+        "faq2": "How much netflix cost?",
+        "faq2Content": "The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.",
+        "faq3": "Where can i Watch?",
+        "faq3Content": "The Standard with Ads plan provides an affordable entry point into Netflix's extensive library. Subscribers can enjoy the majority of Netflix’s content in full high-definition.",
+        "faq4": "How i cancel the Subscription?",
+        "faq4Content": "In the subscription management section, there should be an option to 'Cancel Subscription'.",
+        "readyToWatch": "Ready to watch? Enter your Email to enjoy your favorite movies.",
+        "questionCall": "Question? Call 0305-8887237",
+        "faq": "FAQ",
+        "investorRelation": "Investor Relation",
+        "privacy": "Privacy",
+        "speedTest": "Speed Test",
+        "helpCenter": "Help Center",
+        "cookies": "Cookies",
+        "legalNotice": "Legal Notice",
+        "jobs": "Jobs",
+        "account": "Account",
+        "waysToWatch": "Ways to Watch",
+        "corporateInfo": "Corporate Info.",
+        "onlyOnNetflix": "Only on Netflix",
+        "mediaCenter": "Media Center",
+        "termsOfUse": "Terms of Use",
+        "contactUs": "Contact Us",
+        "footerButtonText": "زبان منتخب کریں"
+    }
+};
+    
+            // Function to toggle dropdown visibility
+            function toggleDropdown() {
+                const dropdown = document.getElementById("dropdown");
+                dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+            }
+    
+            // Function to change the language
+            function changeLanguage(language) {
+                document.querySelectorAll('[data-translate]').forEach((element) => {
+                    const key = element.getAttribute('data-translate');
+                    element.innerText = translations[language][key];
+                });
+                document.getElementById("languageButton").innerHTML = `${translations[language].buttonText} <i class='bx bxs-down-arrow'></i>`;
+                document.getElementById("dropdown").style.display = "none"; // Hide the dropdown after selection
+            }
+    
+            // Close the dropdown if clicked outside
+            window.onclick = function(event) {
+                if (!event.target.matches('#languageButton')) {
+                    const dropdowns = document.getElementsByClassName("dropdown");
+                    for (let i = 0; i < dropdowns.length; i++) {
+                        const openDropdown = dropdowns[i];
+                        if (openDropdown.style.display === "block") {
+                            openDropdown.style.display = "none";
+                        }
+                    }
+                }
+            }
+        </script>
+        
+    </body>
+</html>

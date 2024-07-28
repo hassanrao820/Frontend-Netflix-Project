@@ -1,0 +1,355 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size: 10px;
+}
+body{
+    background: #000;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #777;
+}
+.header{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7) rgba(0,0,0,0.7)), url(img/header-image.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 1rem 5%;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.navbar .logo img{
+        width: 9rem;
+}
+.btn #languageButton{
+    background: transparent;
+    border: 1px solid #fff;
+    padding: .5rem 1rem;
+    color: #fff;
+    margin-right: 1rem;
+}
+.btn #language i{
+    padding-left: .4rem;
+}
+.btn #sign-in{
+    background: red;
+    padding: .7rem 1.3rem;
+    border: none;
+    color: #fff;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+
+}
+.header-content h1{
+    font-size: 5rem;
+    line-height: 7rem;
+    padding-top: 5rem;
+    font-weight: 600;
+    max-width: 650px;
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+.header-content p{
+    padding-top: 4rem;
+    margin-bottom: -6.5rem;
+}
+.email-signup{
+    margin-top: 7rem;
+}
+.email-signup #input{
+    padding: 1.5rem .7rem;
+    border: none;
+    width: 65%;
+    margin: 1rem;
+}
+.email-signup button{
+    background: red;
+    padding: 1.5rem 1.3rem;
+    border: none;
+    color: #fff;
+    margin-left: -1.4rem;
+    border-top-left-radius: 3px;
+}
+.email-signup button i{
+    padding-left: .4rem;
+
+}
+
+/* -------------Feature IMG-------- */
+.features{
+    padding: 5rem 12%;
+    font-size: 2.2rem;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 2rem 0;
+}
+.text-col{
+    flex-basis: 50%;
+    margin-bottom: 2rem;
+}
+.img-col{
+    flex-basis: 50%;
+    margin-bottom: 2rem;
+}
+.img-col img{
+    margin: auto;
+    display: block;
+    width: 90%;
+}
+.features h2{
+    font-size: 5rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+/* ---------FAQ--------- */
+.faq{
+    padding: 1rem 10%;
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.faq h2{
+    font-size: 4rem;
+    font-weight: 400;
+    padding-bottom: 5rem;
+
+}
+.accordion{
+    margin: 6rem auto;
+    width: 100%;
+    max-width: 750px;
+    
+}
+.accordion li{
+    list-style-type: none;
+    width: 100%;
+    padding: .5rem;
+}
+.accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    font-size: 1.8rem;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: .2rem;
+    position: relative;
+    cursor: pointer;
+}
+label::after{
+    content: '+';
+    position: absolute;
+    right: 2rem;
+    font-size: 3.4rem;
+    transition: transform 0.5s;
+    -webkit-transition: transform 0.5s;
+    -moz-transition: transform 0.5s;
+    -ms-transition: transform 0.5s;
+    -o-transition: transform 0.5s;
+}
+input[type="radio"]{
+    display: none;
+}
+.accordion .content {
+    background-color: #303030;
+    text-align: left;
+    padding: 0 2rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 1s, padding 0.5s;
+    -webkit-transition: max-height 1s, padding 0.5s;
+    -moz-transition: max-height 1s, padding 0.5s;
+    -ms-transition: max-height 1s, padding 0.5s;
+    -o-transition: max-height 1s, padding 0.5s;
+}
+.accordion input[type="radio"]:checked + label + .content {
+    max-height: 600px;
+    padding: 3rem 2rem;
+    background: #fff;
+    border: 1px solid black;
+    color: #303030;
+}
+.accordion input[type="radio"]:checked + label::after{
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+}
+.faq .email-signup{
+    max-width: 600px;
+    margin: 2rem auto;
+}
+.faq small {
+    font-size: 1rem;
+}
+/* ----------Footer----- */
+.footer{
+    padding: 5rem 15% 1rem;
+    border-top: 6px solid #333;
+}
+.footer h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+.footer .col{
+    flex-basis: 25%;
+    flex-grow: 1;
+    margin-bottom: 2rem;
+}
+.footer .col a{
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.footer .row{
+    align-items: flex-start;
+    padding: 1rem 0;
+}
+.footer .language{
+    color: #fff;
+    padding: .5rem 1.5rem;
+    background: transparent;
+    border: 2px solid #333;
+}
+.footer .language i{
+    margin-left: .5rem;
+}
+.footer .copyright{
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+footer .footer .lan-btn{
+    padding: .5rem 1rem;
+    background: transparent;
+    border: 1px solid #333;
+    color: #fff;
+}
+.footer .copyright{
+    text-align: center;
+}
+
+/* ------------Media Queries-------- */
+
+@media only screen and (max-width: 600px){
+    .logo{
+        width: 90px;
+    }
+    .header-content{
+        position: unset;
+        transform: none ;
+        -webkit-transform: none ;
+        -moz-transform: none ;
+        -ms-transform: none ;
+        -o-transform: none ;
+        padding-top: 10rem;
+}
+    .header-content h1{
+        font-size: 5rem;
+        line-height: 5rem;
+        padding-top: 4rem;
+    }
+    .header-content h3{
+        font-size: 1.5rem;
+        padding-top: 1rem;
+    }
+    .header-content p{
+        font-size: 1.1rem;
+        margin-bottom: -8rem;
+        line-height: 2rem;
+    }
+    .header-content .email-signup{
+        display: flex;
+    }
+    .header-content .email-signup #input{
+        padding: 1rem .5rem;
+        width: 55%;
+        margin: 2rem;
+    }
+    .btn #languageButton{
+        margin-right: .5rem;
+        padding: .5rem .5rem;
+    }
+    #email-signup{
+        display: flex;
+    }
+    #email-signup #input{
+        padding: 1rem 1rem;
+        width: 55%;
+        margin: 2rem;
+    }
+    #email-signup #btn{
+        padding: 0 1.5rem;
+        font-size: 1rem;
+        height: 4rem;
+        margin: 2rem;
+        margin-left: -2rem;
+    }
+    .header-content .email-signup button{
+        padding: 0 1.5rem;
+        font-size: 1rem;
+        height: 4rem;
+        margin: 2rem;
+        margin-left: -2rem;
+    }
+    .row{
+        padding: 0;
+    }
+    .features {
+        padding: 2rem 5%;
+    }
+    .features h2{
+            font-size: 2.5rem;
+        }
+        .features .row .text-col p{
+            font-size: 1.2rem;
+        }
+        .faq h2{
+            font-size: 2rem;
+            padding-bottom: .2rem;
+        }
+        .faq small{
+            font-size: 1.1rem;
+            letter-spacing: .1rem;
+        }
+        .footer .copyright{
+            font-size: .8rem;
+            letter-spacing: .1rem;
+            margin-bottom: 0;
+        }
+        .accordion li label{
+            font-size: 1.3rem;
+        }
+        footer .footer .lan-btn{
+            padding: .5rem 1rem;
+            background: transparent;
+            border: 1px solid #333;
+            color: #fff;
+
+        }
+}
